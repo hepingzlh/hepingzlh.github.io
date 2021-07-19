@@ -7,47 +7,95 @@
     <script src="jquery/jquery-3.4.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <style>
-        *{
+        * {
             margin: 0px;
             padding: 0px;
+        }
+        [class*="span"] {
+            padding: 0px;
+            margin: 0px;
+
+        }
+
+        .span12{
+            width: 940px;
+        }
+        .span11{
+            width: 861px;
+        }
+        .span10{
+            width: 783px;
+        }
+        .span9{
+            width:705px;
+        }
+        .span8{
+            width:626px;
+        }
+        .span7{
+            width: 548px;
+        }
+        .span6{
+            width:470px;
+        }
+        .span5{
+            width: 391px;
+        }
+        .span4{
+            width: 313px;
+        }
+        .span3{
+            width:235px;
+        }
+        .span2{
+            width:156px;
+        }
+        .span1{
+            width:78px;
         }
     </style>
 </head>
 <body>
 <div class="container">
-    <div style="background-color: #00B76D">
-    <div class="row">
-        <div class="span10 offset1" style="color: red">
-            <h1>我们一家三口人：儿子，老婆和我。儿子叫魏运祺，老婆叫张玲华，我叫何平。</h1>
+    <div style="background-color: #00B76D;margin-left:0px;padding-left:20px;">
+        <div class="row">
+            <div class="span12" style="color: red">
+                <h1>我们一家三口人：儿子，老婆和我。儿子叫魏运祺，老婆叫张玲华，我叫何平。</h1>
+            </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="span4">
-            <img src="img1/11.jpg">
-        </div>
-        <div class="span4">
-            <img src="img1/33.jpg">
-        </div>
-        <div class="span4">
-            <img src="img1/22.jpg">
-        </div>
-
-    </div>
-    <div class="row">
-
-        <div class="span8 offset2 ">
-            <dl><img src="img1/44.jpg"></dl>
-            <dt><h3>儿子和我，摄于2014年</h3></dt>
+        <div class="row">
+            <div class="span4">
+                <img src="img1/11.jpg">
+            </div>
+            <div class="span4">
+                <img src="img1/33.jpg">
+            </div>
+            <div class="span4">
+                <img src="img1/22.jpg">
+            </div>
 
         </div>
-
-    </div>
         <div class="row">
 
-            <div class="span8 offset2 ">
+            <div class="span6 ">
+                <dl><img src="img1/44.jpg"></dl>
+                <dt><h3>儿子和我，摄于2014年</h3></dt>
+
+            </div>
+            <div class="span6">
                 <dl><img src="img1/55.jpg"></dl>
                 <dt><h3>父亲，母亲，摄于家中</h3></dt>
 
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="span12" >
+                <hr style="background-color: yellow">
+                <ol><h3>7月19日，开始写些东西,bootstrap去掉div中间间隙。</h3>
+                <li><h4>先将padding和magin调为零，再设span的宽度。</h4></li>
+                </ol>
             </div>
 
         </div>
