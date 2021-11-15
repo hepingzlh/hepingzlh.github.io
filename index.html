@@ -107,6 +107,7 @@
             </div>
 
         </div>
+
         <div class="row" >
             <hr style="margin-top: -2px;padding-top: -2px">
             <div class="span9" >
@@ -152,6 +153,73 @@
                 <dt>执子之手，与子携老。</dt>
             </div>
         </div>
+
+        <div class="row">
+            <div class="span9">
+                <hr>
+                <xmp>
+                    <!DOCTYPE html>
+                    <html lang="en">
+                    <head>
+                        <meta charset="UTF-8">
+                        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+                        <title>Document</title>
+                        <script src="jquery-3.4.1.min.js"></script>
+                        <script src="filesave.js"></script>
+                        <script src="angular.js"></script>
+                    </head>
+                    <body>
+                    <div ng-app="myApp" ng-controller="myController">
+                        <h2>我的笔记</h2>
+                        <form>
+                            <textarea ng-model="message" rows="10" cols="40"></textarea>
+                            <P>
+                                <button ng-click="save()">保存</button>
+                                <button ng-click="clear()">清空</button>
+                            </P>
+                        </form>
+                        <h2>剩余字数：<span ng-bind="left()"></span></h2>
+
+                    </div>
+                    <script>
+                        var app = angular.module("myApp", []);
+                        app.controller("myController", function ($scope) {
+                            $scope.message = '';
+                            $scope.save = function () {
+                                // alert("notes save!");
+
+                                var content = $scope.message.value;
+                                var blob = new Blob([content], {type: "text/plain;charset=utf-8"});
+                                saveAs(blob, "file1.txt"); //saveAs(blob,filename)
+
+
+                            }
+                            $scope.clear = function () {
+                                $scope.message = '';
+                            }
+                            $scope.left = function () {
+                                return 100 - $scope.message.length;
+                            }
+                        })
+                    </script>
+
+
+                    </body>
+                    </html>
+
+                </xmp>
+
+
+
+            </div>
+            <div class="span3">
+                <dl><img src="add/f4.jpg">
+                </dl>
+                <dt>生命可贵，爱情价高。</dt>
+            </div>
+        </div>
+
         <div class="row">
             <div class="span9">
                 <hr style="background-color: yellow;margin-top: 0px;padding-top: 0px" >
