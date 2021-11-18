@@ -7,6 +7,7 @@
     <link rel='stylesheet' href='riri.css' />
     <script src="jquery/jquery-3.4.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <link rel='stylesheet' href='timemil.css' />
 
     <style>
         * {
@@ -84,7 +85,23 @@
 
         <div class="row" >
             <div class="span4" style="margin-top: 0px;padding-top: 0px;margin-bottom: 0px;padding-bottom: 0px">
-                <img src="1113.jpg" style="margin-top: 0px;padding-top: 0px" alt="对不起，您的图跑丢了">
+                <!--<img src="1113.jpg" style="margin-top: 0px;padding-top: 0px" alt="对不起，您的图跑丢了">-->
+                <div class="box">
+                    <p class="times">
+                        <span class="min">00</span>
+                        <b>:</b>
+                        <span class="second">00</span>
+                        <b>:</b>
+                        <span class="millisecond">00</span>
+                        <span class="rendom">0</span>
+                    </p>
+                    <p class="con">
+                        <button type="button" class="start">开始</button>
+                        <button type="button" class="end">停止</button>
+                        <button type="button" class="reset">复位</button>
+                    </p>
+                </div>
+                <script src="timemil.js"></script>
             </div>
             <div class="span4" style="margin-top: 0px;padding-top: 0px;margin-bottom: 0px;padding-bottom: 0px">
                 <img src="img1/33.jpg" style="margin-top: 0px;padding-top: 0px">
