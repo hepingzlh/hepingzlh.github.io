@@ -11,22 +11,9 @@
 
     <style>
         * {
-            margin: 0;
-            padding: 0;
-            color: white;
+            margin: 0px;
+            padding: 0px;
         }
-        body{
-            background-color: grey;
-        }
-
-        #mycanvas {
-            background: black;
-        }
-
-
-
-
-
         [class*="span"] {
             padding: 0px;
             margin: 0px;
@@ -73,93 +60,8 @@
     </style>
 </head>
 <body>
-
-
-
-
-
-
 <div class="container">
-
-
-
-
-
-
-
-
-
-
-
-
-    <div style="background-color: black;margin-left:0px;padding-left:20px;">
-
-<div id="a333" style="position: fixed;z-index: 666;background: transparent;opacity:0.2;margin-left: -320px;">
-        <canvas id="mycanvas">
-            您的浏览器不支持canvas画布
-        </canvas>
-          
-        <script>
-            //获取mycanvas画布   
-            var can = document.getElementById("mycanvas");
-            var ctx = can.getContext("2d");
-            //画布宽度   
-            var wid = window.screen.width;
-            //画布高度   
-            var hei = window.screen.height+200;
-            can.width = wid;
-            can.height = hei;
-            //雪花数目   
-            var snow = 100;
-            //雪花坐标、半径   
-            var arr = []; //保存各圆坐标及半径   
-            for (var i = 0; i < snow; i++) {
-                arr.push({
-                    x: Math.random() * wid,
-                    y: Math.random() * hei,
-                    r: Math.random() * 10 + 1
-                })
-            }
-
-            //画雪花   
-            function DrawSnow() {
-                ctx.clearRect(0, 0, wid, hei);
-                ctx.fillStyle = "white";
-                ctx.beginPath();
-                for (var i = 0; i < snow; i++) {
-                    var p = arr[i];
-                    ctx.moveTo(p.x, p.y);
-                    ctx.arc(p.x, p.y, p.r, 0, 2 * Math.PI, false);
-                }
-                ctx.fill();
-                SnowFall();
-                ctx.closePath();
-            }
-
-            //雪花飘落   
-            function SnowFall() {
-                for (var i = 0; i < snow; i++) {
-                    var p = arr[i];
-                    p.y += Math.random() * 2 + 1;
-                    if (p.y > hei) {
-                        p.y = 0;
-                    }
-                    p.x += Math.random() * 2 + 1;
-                    if (p.x > wid) {
-                        p.x = 0;
-                    }
-                }
-            }
-
-            setInterval(DrawSnow, 50);
-        </script>
-
-</div>
-
-
-<div id="a334" style="position: relative">
-
-
+    <div style="background-color: #00B76D;margin-left:0px;padding-left:20px;">
         <div class="row">
             <div class="span12" style="background-color:beige">
                 <div class="navbar navbar-default" role="navigation">
@@ -180,8 +82,14 @@
                 <img src="bestbanner.gif">
             </div>
         </div>
+        <div class="row">
+            <div class="span12">
 
+                <img src="新年.png">
+            </div>
+        </div>
         <div class="row" >
+            <hr style="margin-top: 0px;margin-bottom: 0px">
             <div class="span4" style="margin-top: 0px;padding-top: 0px;margin-bottom: 0px;padding-bottom: 0px">
                 <!--<img src="1113.jpg" style="margin-top: 0px;padding-top: 0px" alt="对不起，您的图跑丢了">-->
                 <div class="box">
@@ -199,6 +107,7 @@
                         <button type="button" class="reset" id="reset1">复位</button>
                     </p>
                 </div>
+
                 <script src="timemil.js"></script>
             </div>
             <div class="span4" style="margin-top: 0px;padding-top: 0px;margin-bottom: 0px;padding-bottom: 0px">
@@ -209,6 +118,7 @@
             </div>
 
         </div>
+
 
         <div class="row">
 
@@ -609,17 +519,6 @@
             </div>
 
         </div>
-
-
-
-
-</div>
-
-
-
-
-
-
 
 </body>
 </html>
