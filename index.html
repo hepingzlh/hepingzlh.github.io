@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
     <link href="css/bootstrap.css" rel="stylesheet">
     <link rel='stylesheet' href='riri.css' />
+    <!--<link href="css/bootstrap-responsive.css" rel="stylesheet" type="text/css">-->
     <script src="jquery/jquery-3.4.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <link rel='stylesheet' href='timemil.css' />
@@ -72,6 +74,7 @@
                         <li><a href="##">成功案例</a></li>
                         <li><a href="##">关于我们</a></li>
                     </ul>
+                    <span id="ye123" style="font-size: 18px;margin-left: 100px;">123</span>
                 </div>
             </div>
 
@@ -88,7 +91,7 @@
                 <img src="新年.png">
             </div>
         </div>
-        <div class="row-fluid" >
+        <div class="row" >
             <hr style="margin-top: 0px;margin-bottom: 0px">
             <div class="span4" style="margin-top: 0px;padding-top: 0px;margin-bottom: 0px;padding-bottom: 0px">
                 <!--<img src="1113.jpg" style="margin-top: 0px;padding-top: 0px" alt="对不起，您的图跑丢了">-->
@@ -519,6 +522,37 @@
             </div>
 
         </div>
+
+
+        <script language=JavaScript>
+
+            <!-- [Step1]: 这里能够改变站点的开业日期年月日 -->
+            StartTime(2020,11,25);
+
+            function StartTime(Y,M,D)
+            {
+                Now=new Date();
+                Nowy=Now.getFullYear();
+                Nowm=Now.getMonth();
+                Nowd=Now.getDate();
+                MA=new Array("Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec");
+                Nowstring=MA[Nowm]+" "+Nowd+", "+Nowy;
+                Paststring=MA[M-1]+" "+D+", "+Y;
+                TotalDate=(Math.round((Date.parse(Nowstring)-Date.parse(Paststring))/(24*3600000))*1);
+                <!-- [Step2]: 这里可以更该页面显示的提示信息 -->
+                // document.write("本网站已经正常开业 "+TotalDate+" 天了。");
+
+
+                var yer=document.getElementById("ye123");
+                yer.innerHTML="本网站已经正常开业 "+TotalDate+" 天了。"
+
+            }
+
+
+
+
+
+        </script>
 
 </body>
 </html>
