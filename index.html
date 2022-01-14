@@ -7,6 +7,7 @@
     <link href="css/bootstrap.css" rel="stylesheet">
     <link rel='stylesheet' href='riri.css' />
     <!--<link href="css/bootstrap-responsive.css" rel="stylesheet" type="text/css">-->
+    <!--<link href="css/bootstrap-responsive.min.css" rel="stylesheet">-->
     <script src="jquery/jquery-3.4.1.min.js"></script>
 
     <script src="snowflakes.min.1.0.0.js"></script>
@@ -64,7 +65,9 @@
 
     </style>
 </head>
-<body style="background-color:cadetblue ">
+<!--<body style="background-color:cadetblue ">-->
+
+<body id="tag">
 <!--<body>-->
 
 <div class="container">
@@ -561,6 +564,29 @@
 
 
         </script>
+
+
+<script>
+    function rnd(m,n){
+        return parseInt(Math.random()*(n-m)+m);
+    };
+    function ttt()
+    {
+        var oDiv=document.getElementById('tag');
+        oDiv.style.background='rgb('+rnd(0,256)+', '+rnd(0,256)+', '+rnd(0,256)+')';
+    };
+
+    var t2 = window.setInterval(function() {
+
+        ttt();
+    },3500)
+
+    // window.clearInterval(t2)  // 去除定时器
+
+
+
+</script>
+
 
 </body>
 </html>
