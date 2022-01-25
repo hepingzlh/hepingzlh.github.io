@@ -62,12 +62,26 @@
         .span1{
             width:78px;
         }
+        #quan{
+            width: 1920px;
+            height: 1080px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: black;
+            opacity: 0.76;
+            pointer-events: none;
+
+        }
+        div{
+            pointer-events: auto;
+        }
 
     </style>
 </head>
 <!--<body style="background-color:cadetblue ">-->
 
-<body id="tag">
+<body id="tag" onclick="tm()" >
 <!--<body>-->
 
 <div class="container">
@@ -565,7 +579,7 @@
 
         </script>
 
-
+<div id="quan" ></div>
 <script>
     function rnd(m,n){
         return parseInt(Math.random()*(n-m)+m);
@@ -582,7 +596,12 @@
     },6000)
 
     // window.clearInterval(t2)  // 去除定时器
-
+    var quan=document.getElementById("quan");
+    function tm() {
+       // for(i=0;i<quan.length;i++)
+        quan.style.opacity=0;
+        pointerEvents: "none";
+    }
 
 
 </script>
