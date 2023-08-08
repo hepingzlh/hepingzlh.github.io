@@ -14,7 +14,9 @@
     <link rel='stylesheet' href='timemil.css' />
     <!--<script src="temp/three.min.js"></script>-->
     <script src="bootstrap3.js"></script>
-
+    
+<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+    
     <!--<style type="text/css">-->
         <!--body, html,#allmap {width: 100%;height: 100%;overflow: hidden;margin:0;font-family:"微软雅黑";}-->
     <!--</style>-->
@@ -86,6 +88,25 @@
             <div class="col-xs-12">
 
                 <img src="christmas2023.jpg" style="width: 100%" >
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-12">
+
+               <video id="video" style="width: 100%" controls></video>
+
+<script>
+    if (Hls.isSupported()) {
+        var video = document.getElementById('video');
+        var hls = new Hls();
+        hls.loadSource('./zui/index.m3u8');
+        hls.attachMedia(video);
+        hls.on(Hls.Events.MANIFEST_PARSED, function() {
+            video.play();
+        });
+    }
+</script>
             </div>
         </div>
 
