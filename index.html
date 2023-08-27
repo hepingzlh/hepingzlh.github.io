@@ -110,6 +110,36 @@
             </div>
         </div>
 
+
+
+
+
+        <div class="row">
+            <div class="col-xs-12">
+
+               <video id="video" style="width: 100%" controls></video>
+
+<script>
+    if (Hls.isSupported()) {
+        var video = document.getElementById('video');
+        var hls = new Hls();
+        hls.loadSource('./yv1/index.m3u8');
+        hls.attachMedia(video);
+        hls.on(Hls.Events.MANIFEST_PARSED, function() {
+            video.play();
+        });
+    }
+</script>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-12">
+<h3>听到这首歌,我哭了,我没想到我的妻会离开我,也怪我当初不懂事,喜欢美女,见异思迁。</h3>
+            </div>
+        </div>
+        
+
         <!--<div class="row">-->
             <!--<div class="col-xs-12">-->
 
