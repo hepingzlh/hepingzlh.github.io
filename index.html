@@ -94,11 +94,11 @@
         <div class="row">
             <div class="col-xs-12">
 
-               <video id="video" style="width: 100%" controls></video>
+               <video id="video1" style="width: 100%" controls></video>
 
 <script>
     if (Hls.isSupported()) {
-        var video = document.getElementById('video');
+        var video = document.getElementById('video1');
         var hls = new Hls();
         hls.loadSource('./zui/index1.m3u8');
         hls.attachMedia(video);
